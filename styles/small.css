@@ -139,14 +139,17 @@ header span {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}    
 
 .selfie img {
     margin: 15px;
     border-radius: 22px;
     border: solid 1px #3D405B;
-    box-shadow: 3px 3px 3px #3D405B
+    box-shadow: 3px 3px 3px #3D405B;
+    width: 239px;
+    height: 240px;
 }
+
 
 
 
@@ -270,6 +273,7 @@ footer {
     padding: 1rem 10px;
     text-align: center;
     margin: 0 10px 0 10px;
+    border-top: 1px solid black;
 }
 
 .social {
