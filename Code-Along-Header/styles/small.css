@@ -1,0 +1,310 @@
+/*************************************** Site-Wide ***********************************/
+:root {
+  --primary-color: #3d405b; /* dark bluish-gray */
+  --accent-color: #E07A5f;  /* warm coral */
+  --text-light: #eee   /* light gray for text */
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eeee;
+    
+}
+
+
+
+main {
+    display: block;
+}
+
+
+
+h1 {
+    margin-left: 10px;
+    color: #3D405B
+}
+
+h2 {
+    color: #3D405B;
+    margin: 0 10px 0 10px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 5px 0;
+
+}
+
+p {
+    background-color: #eee;
+    margin: 0 10px 1rem 10px;
+    color: #3D405B;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+/*************************************** Header Styles ***********************************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 10px;
+    align-items: end
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+/*************************************** Hamburger Button Styles ***********************************/
+.hamburger {
+    background: none;
+    border: none;
+    color: #3D405B;
+    cursor: pointer;
+    font-family: Verdana;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 1.5rem;
+}
+
+/*************************************** Navigation Styles ***********************************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #3D405B;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #E07A5f;
+}
+
+/*************************************** Main Styles ***********************************/
+
+
+.selfie {
+    background-color: #eee;
+    margin: 0 10px 1rem 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selfie img {
+    margin: 15px;
+    border-radius: 22px;
+    border: solid 1px #3D405B;
+    box-shadow: 3px 3px 3px #3D405B
+}
+
+
+
+
+
+
+/*************************************** Courses Styles ***********************************/
+
+
+
+
+#certificate-courses h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    background-color: #ddd;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#certificate-courses {
+    background-color: #eee;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#course-filters {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#course-filters button {
+    background-color:var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+#course-filters button:hover,
+#course-filters button.active {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.course-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+
+/******************************************** Course Cards ************************************/
+
+.course-card {
+    background: #fff;
+    border: 2px solid var(--primary-color); 
+    border-radius: 0.5rem; 
+    padding: 1rem;
+    color: var(--primary-color);
+    margin: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(61, 64, 91, 0.3);
+}
+
+.course-card.completed {
+    background: var(--accent-color);
+    color: var(--text-light);
+    border-color: var(--accent-color);
+}
+
+.course-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.course-card.completed h3 {
+    color: black;
+}
+
+
+.course-card.completed p {
+    color: black;
+}
+.course-card p {
+    background-color: transparent;
+    
+}
+
+
+
+.credits {
+    background-color: transparent;
+    margin: 2rem 0 2rem 0;
+    font-size: 2rem;
+}
+
+
+
+/*************************************** Footer Styles ***********************************/
+footer {
+    background-color: transparent;
+    padding: 1rem 10px;
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
+footer p {
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+

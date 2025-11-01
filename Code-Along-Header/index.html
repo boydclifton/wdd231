@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+
+    <title>Boyd Stinnett Home Page</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="site logo" width="512" length="512">
+        <span>Boyd's Site</span>
+        <button id="ham-btn" class="hamburger"></button>
+
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <h1>Home</h1>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hi, my name is Boyd Stinnett. I grew up in the Eastern part of the United States. 
+                I have lived in several states including New York, New Jersey, Maryland, and now Pennsylvania. 
+                I have a background in audio engineering and music production, having worked in recording studios 
+                and live sound environments. I am passionate about technology and enjoy learning new skills, 
+                which led me to pursue web development. In my free time, I enjoy hiking, photography, and exploring 
+                new places. This website is a reflection of my journey into web development and showcases my skills 
+                and projects as I continue to learn and grow in this field.
+            </p>
+
+        </section>
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <div class="selfie">
+                <img src="images/selfie.jpg" alt="site logo" width="239" length="240">
+            </div>
+        </section>
+        </div>
+        <section id="certificate-courses">
+
+            <h2>Web Certificate Courses</h2>
+            <div id="course-filters">
+                <button id="btn-all" class="current">All Courses</button>
+                <button id="btn-wdd">WDD Courses</button>
+                <button id="btn-cse">CSE Courses</button>
+            </div>
+            <p class="credits">
+                Total Credits: <span id="total-credits">0</span>
+            </p>
+
+            <div id="courses" class="course-grid"></div>
+
+            
+
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="https://www.facebook.com/"><img src="images/facebook.svg"
+                    alt="Facebook" width="16" height="16"></a>
+            <a href="https://github.com/boydclifton" target="https://github.com/boydclifton"><img
+                    src="images/github.svg" alt="Github" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/" target="https://www.linkedin.com/"><img src="images/linkedin.svg"
+                    alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://x.com/" target="https://x.com/"><img src="images/twitter-x.svg" alt="Twitter" width="16"
+                    height="16"></a>
+
+        </div>
+
+        <p>
+            &copy<span id="currentyear"></span> | Boyd Stinnett | Pittsburgh, PA
+        </p>
+        <p id="lastModified">Last modified</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
