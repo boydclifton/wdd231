@@ -97,9 +97,9 @@ function renderCourses(courseList) {
         }
 
         card.innerHTML = `
-        <h3>${course.subject} ${course.number}: ${course.title}</h3>
+        <h3>${course.subject} ${course.number}: ${course.title}    ${course.completed ? "✅" : "❌"} </h3>
         
-        <p class="status">${course.completed ? "✅" : "❌"}</p> 
+        <p class="status"></p> 
         `;
 
         coursesContainer.appendChild(card);

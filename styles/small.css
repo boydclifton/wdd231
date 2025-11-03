@@ -191,19 +191,22 @@ header span {
 #course-filters button {
     background-color: var(--primary-color);
     color: var(--text-light);
-    border: none;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
+    border: black solid 1px;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
     cursor: pointer;
     font-weight: 500;
+    font-size: 0.9rem;
     transition: background 0.3s ease;
     margin-top: 1rem;
+
 }
 
 #course-filters button:hover,
 #course-filters button.active {
     background-color: var(--accent-color);
     color: black;
+    font-weight: 700;
 }
 
 .course-grid {
@@ -216,7 +219,7 @@ header span {
 
 .course-card {
     background: #fff;
-    border: 2px solid var(--primary-color);
+    border: 1.5px solid var(--primary-color);
     border-radius: 0.5rem;
     padding: 1rem;
     color: var(--primary-color);
@@ -232,7 +235,7 @@ header span {
 .course-card.completed {
     background: var(--accent-color);
     color: var(--text-light);
-    border-color: var(--accent-color);
+    border-color: black;
 }
 
 .course-card h3 {
@@ -245,11 +248,15 @@ header span {
 
 .course-card.completed h3 {
     color: black;
+    padding: 0;
+    display: flex;    justify-content: center;
+    align-items: center;
 }
 
 
 .course-card.completed p {
     color: black;
+    padding: 0;
 }
 
 .course-card p {
