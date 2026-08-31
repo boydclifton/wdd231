@@ -1,0 +1,252 @@
+/* ========= Reset basics handled separately in reset.css ========= */
+
+
+
+/* ------------------------ CSS VARIABLES-------------------------- */
+
+
+
+:root {
+    --primary-color: #2E4057;       /* Blue-grey */
+    --secondary-color: #D4A017;     /* Gold accent */
+    --bg-color: #F8F9FA;            /* Lighter background */
+    --text-color: #1E1E1E;          /* Charcoal text */ 
+    --radius: 0.75rem; 
+    --space: 1rem;
+}
+
+/*-------------------------- GLOBAL STYLES ------------------------- */
+
+
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/*------ LINKS -------- */
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+
+
+/*-------------------------- HEADER & NAVIGATION ------------------------- */
+
+
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+}
+
+.logo img {
+    margin-right: 0.5rem;
+}
+
+.hamburger {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: var(--radius);
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* hidden on mobile by default */
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.navigation.open ul {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a[aria-current="page"] {
+    background-color: var(--secondary-color);
+    color: #000;
+}
+
+
+
+/*-------------------------- RESPONSIVE BREAKPOINT ------------------------- */
+
+
+
+@media (min-width: 38rem) {
+    .hamburger {
+        display: none
+    }
+
+    .navigation ul {
+        display: flex; 
+        flex-direction: row;
+        position: static;
+        background: none; 
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+
+/*-------------------------- FOOTER ------------------------- */
+
+
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--secondary-color);
+}
+
+.site-footer small {
+    color: #E0E0E0;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+
+
+/*-------------------------- DIRECTORY TOOLBAR & CARDS ------------------------- */
+
+
+
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.view-toggle button {
+    border: 2px solid var(--primary-color);
+    background: white;
+    color: var(--primary-color);
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-toggle button[aria-pressed="true"] {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/*---- CARDS CONTAINER ----*/
+
+.cards.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cards.list {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+/*--- CARD ---*/ 
+
+.member {
+    background: #fff;
+    color: var(--text-color);
+    border: 1px solid #E6E6E6;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    padding: 1rem;
+}
+
+.cards.list .member {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/*---- Member image/icon ----*/
+
+.member img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background: #F2F2F2;
+}
+
+/*--- MEMBER NAME + META ---*/
+
+.member h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.05rem;
+}
+
+.member .meta {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 320px) {
+    .cards.grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+

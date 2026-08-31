@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Directory | Manheim, PA Chamber of Commerce</title>
+    <meta name="description" content="Browse the Manheim, Pennsylvania Chamber of Commerce member directory. Find local businesses and organizations.">
+    <meta name="author" content="Boyd Stinnett">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Member Directory | Manheim, PA Chamber of Commerce">
+    <meta property="og:description" content="Explore Manheim’s business community—search and view local chamber members.">
+    <meta property="og:image" content="https://YOUR-DOMAIN.example/wdd231/chamber/directory.html">
+    <meta property="og:type" content="https://YOUR-DOMAIN.example/wdd231/chamber/directory.html">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+
+
+</head>
+<body>
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+            <img src="images/favicon.ico" alt="Manheim Chamber logo" width="40" height="40">
+            <span>Manheim Chamber</span>
+        </a>
+
+         <!-- Hamburger button for mobile -->
+        <button id="menuButton" class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+        <!-- Primary navigation -->
+       <nav id="primaryNav" class="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Member Directory</h1>
+
+        <!-- View Controls -->
+         <form class="toolbar" aria-label="Directory controls" onsubmit="return false;">
+            <div class="view-toggle" role="group" aria-label="Change directory view">
+                <button type="button" id="gridBtn" aria-pressed="true">Grid</button>
+                <button type="button" id="listBtn" aria-pressed="false">List</button>
+            </div>
+         </form>
+
+         <section id="members" class="cards grid" aria-live="polite">
+            <p>Loading members...</p>
+         </section>
+    </main>
+    
+    <footer class="site-footer">
+        <section class="contact">
+            <p><strong>Manheim Chamber of Commerce</strong></p>
+            <p>123 Market Street, Manheim, PA 17545</p>
+            <p>Email: <a href="mailto:info@manheimchamber.org">info@manheimchamber.org</a></p>
+        </section>
+
+        <section class="credits">
+            <p>© <span id="currentYear"></span> Manheim Chamber of Commerce</p>
+            <p><small id="lastModified"></small></p>
+        </section>
+    </footer>
+    
+    <!-- JS files already linked in <head> -->
+</body>
+
+
+</html>
