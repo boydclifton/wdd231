@@ -1,115 +1,88 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="first attempt at home page for Boyd Stinnett using html, css, and dynamic javascript">
-    <meta name="author" content="Boyd Stinnett">
-    <meta property="og:description"
-        content="The quickly changing home page for the student named Boyd Stinnett. It is being used as 
-        the sandbox to learn more advanced web development tools and applications.">
-    <meta property="og:title" content="Boyd Stinnett's Home Page for WDD231">
-    <meta property="og:url" content="https://boydclifton.github.io/wdd231/index.html">
-    <meta property="og:image" content="images/homepage-screenshot.png">
-    <link rel="icon" href="images/favicon.ico">
+    <meta description="WDD 231 - Web Frontend Development I - Home Page for Boyd Stinnett">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/courses.js" defer></script>
-    <script src="scripts/dates.js" defer></script>                                                                                                                                                                                                                                                                                                 
-
-
-    <title>Boyd Stinnett's Home Page</title>
-</head>
+    <script src="scripts/dates.js" defer></script>
+    <title>Boyd Stinnett Home Page</title>
 
 <body>
     <header>
-        <img src="images/home.svg" alt="site logo">
-        <span>Boyd's Site</span>
-        <button id="ham-nav" class="hamburger"></button>
-
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Boyd Stinnett</span>
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
     </header>
-    <nav id="nav-bar" class="navigation"><is this the navigation bar? yes it is></is>>
+
+    <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="#">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+            <li class="current"><a href='#'>Home</a></li>
+            <li><a href='#'>Chamber</a></li>
+            <li><a href='#'>Final</a></li>
         </ul>
     </nav>
 
     <main>
 
         <h1>Home</h1>
-        <section class="about">
+
+        <section class="card">
             <h2>About Me</h2>
-            <p>Hi, my name is Boyd Stinnett. I grew up in the Eastern part of the United States.
+            <p> Hi, my name is Boyd Stinnett. I grew up in the Eastern part of the United States.
                 I have lived in several states including New York, New Jersey, Maryland, and now Pennsylvania.
                 I have a background in audio engineering and music production, having worked in recording studios
                 and live sound environments. I am passionate about technology and enjoy learning new skills,
                 which led me to pursue web development. In my free time, I enjoy hiking, photography, and exploring
                 new places. This website is a reflection of my journey into web development and showcases my skills
-                and projects as I continue to learn and grow in this field.
-            </p>
-
+                and projects as I continue to learn and grow in this field.</p>
         </section>
-        <section class="photo">
+
+        <section class="card">
             <h2>Student Photo</h2>
-            <div class="selfie">
-                <img src="images/selfie.jpg" alt="site logo">
-            </div>
+            <img src="images/selfie.jpg" alt="Profile photo of Boyd Stinnett" loading="lazy" width="478" height="480">
         </section>
 
-        <section id="certificate-courses">
-
+        <section class="card">
             <h2>Web Certificate Courses</h2>
-            <div id="course-filters">
-                <button id="btn-all" class="current">All Courses</button>
-                <button id="btn-wdd">WDD Courses</button>
-                <button id="btn-cse">CSE Courses</button>
+            <div class="button-container">
+                <button id="btn-all">All</button>
+                <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
             </div>
-            <p class="credits">
-                Total Credits: <span id="total-credits">0</span>
-            </p>
+            <div id="course-list">
 
-            <div id="courses" class="course-grid"></div>
-
-
-
-
-
+            </div>
+            <p>The total credit hours for these courses is: <span id='total-credits'></span></p>
         </section>
     </main>
 
     <footer>
         <div class="social">
-            <a href="https://www.facebook.com/" target="https://www.facebook.com/"><img src="images/facebook.svg"
-                    alt="Facebook" width="16" height="16"></a>
-            <a href="https://github.com/boydclifton" target="https://github.com/boydclifton"><img
-                    src="images/github.svg" alt="Github" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/" target="https://www.linkedin.com/"><img src="images/linkedin.svg"
-                    alt="LinkedIn" width="16" height="16"></a>
-            <a href="https://x.com/" target="https://x.com/"><img src="images/twitter-x.svg" alt="Twitter" width="16"
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16"
                     height="16"></a>
-
+            <a href="https://github.com/boydclifton" target="_blank"><img src="images/github.svg" alt="Github"
+                    width="16" height="16"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16"
+                    height="16"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="Twitter" width="16"
+                    height="16"></a>
         </div>
-
-        <p>
-            ©<span id="currentyear"></span> | Boyd Stinnett | Pittsburgh, PA
+        <p>©
+            <span id='currentyear'></span> | Boyd Stinnett | Harrisburg, PA |
         </p>
-        <p id="lastModified">Last modified</p>
+        <p id="lastmodified"></p>
     </footer>
-
-
-
 
 </body>
 
-</html> -->
-
-<!-- This is hard but I gotta keep going -->
- 
+</html>

@@ -1,5 +1,7 @@
-const yearSpan = document.querySelector("#currentyear");
+const yearSpan = document.querySelector('#currentyear');
 const today = new Date();
-yearSpan.textContent = today.getFullYear();
+yearSpan.innerHTML = today.getFullYear();  
 
-document.querySelector("#lastModified").textContent = `Last modified: ${document.lastModified}`;
+const lastModified = document.querySelector('#lastmodified'); 
+lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
+

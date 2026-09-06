@@ -6,9 +6,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
+        technology: [ 'Python' ],
         completed: true
     },
     {
@@ -18,10 +16,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
+        technology: [ 'HTML', 'CSS' ],
         completed: true
     },
     {
@@ -31,9 +26,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
+        technology: [ 'Python' ],
         completed: true
     },
     {
@@ -43,9 +36,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
+        technology: [ 'C#' ],
         completed: true
     },
     {
@@ -55,11 +46,7 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        technology: [ 'HTML', 'CSS', 'JavaScript' ],
         completed: true
     },
     {
@@ -69,84 +56,55 @@ const courses = [
         credits: 2,
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
+        technology: [ 'HTML', 'CSS', 'JavaScript' ],
         completed: false
     }
-]
+];
 
-const coursesContainer = document.querySelector("#courses");
-const totalCredits = document.querySelector("#total-credits");
-
-const btnAll = document.querySelector("#btn-all");
-const btnWDD = document.querySelector("#btn-wdd");
-const btnCSE = document.querySelector("#btn-cse");
+const courseContainer = document.querySelector('#course-list');
+const totalCreditsElement = document.querySelector('#total-credits');
 
 
-function renderCourses(courseList) {
-    coursesContainer.innerHTML = "";
-
+function displayCourses(courseList) {
+    courseContainer.innerHTML = '';
     courseList.forEach(course => {
-        const card = document.createElement("article");
-        card.classList.add("course-card");
-        if (course.completed === true) {
-            card.classList.add("completed");
+        const courseCard = document.createElement('div'); 
+
+        if (course.completed) {
+            courseCard.classList.add('course-card', 'completed');
+        } else {
+            courseCard.classList.add('course-card', 'incomplete');
         }
 
-        card.innerHTML = `
-        <h3>${course.completed ? "✅" : "❌"}          ${course.subject} ${course.number}: ${course.title}    
-        </h3>
-        
-        
-        `;
-
-        coursesContainer.appendChild(card);
-
+        courseCard.innerHTML = `<h3>${course.subject} ${course.number}: ${course.title}</h3>`;
+        courseContainer.appendChild(courseCard);
     });
 
-    const credits = courseList.reduce((sum, course) => sum + course.credits, 0);
-    totalCredits.textContent = credits;
-
+    const totalCredits = courseList.reduce((accumulator, course) => {
+        return accumulator + course.credits;
+    }, 0);
+    totalCreditsElement.innerHTML = totalCredits;
 }
 
-
-function showAllCourses() {
-    setActiveButton(btnAll);
-    renderCourses(courses);
-}
-
-function showWDDCourses() {
-    const wddCourses = courses.filter(course => course.subject === "WDD");
-    setActiveButton(btnWDD);
-    renderCourses(wddCourses);
-}
-
-function showCSECourses() {
-    const cseCourses = courses.filter(course => course.subject === "CSE");
-    setActiveButton(btnCSE);
-    renderCourses(cseCourses);
-}
-
-function setActiveButton(activeBtn) {
-    btnAll.classList.remove("active");
-    btnWDD.classList.remove("active");
-    btnCSE.classList.remove("active");
-
-    activeBtn.classList.add("active");
-}
-
-btnAll.addEventListener("click", showAllCourses);
-btnWDD.addEventListener("click", showWDDCourses);
-btnCSE.addEventListener("click", showCSECourses);
-
-showAllCourses();
+displayCourses(courses);
 
 
 
+const allButton = document.getElementById('btn-all');
+const cseButton = document.getElementById('btn-cse');
+const wddButton = document.getElementById('btn-wdd');
 
+allButton.addEventListener('click', () => {
+    displayCourses(courses);
+});
 
+cseButton.addEventListener('click', () => {
+    const cseCourses = courses.filter(course => course.subject === 'CSE');
+    displayCourses(cseCourses);
+})
 
+wddButton.addEventListener('click', () => {
+    const wddCourses = courses.filter(course => course.subject === 'WDD');
+    displayCourses(wddCourses);
+});
 
