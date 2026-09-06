@@ -227,7 +227,7 @@ main h1 {
 
 .course-card.incomplete {
     background-color: var(--accent-color);
-    color: var(--text-light);
+    color: black;
 }
 
 #course-list + p {
