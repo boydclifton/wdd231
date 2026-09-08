@@ -1,76 +1,28 @@
-[
-    {
-        "name": "Stiegel Glassworks 1976",
-        "address": "4 S Charlotte St, Manheim PA 17545",
-        "phone": "(717) 664-6408",
-        "website": "https://stiegelglassworks.org/",
-        "image": "images/members/stiegel-glassworks.webp",
-        "level": 3,
-        "category": "Arts & Manufacturing",
-        "description": "Handcrafted art glass inspired by Manheim's 18th-century heritage."
-
-    },
-    {
-        "name": "Root's Country Market & Auction",
-        "address": "705 Graystone Rd, Manheim, PA 17545",
-        "phone": "(717) 898-7811",
-        "website": "https://www.rootsmarket.com/",
-        "image": "images/members/roots-market.webp",
-        "level": 3,
-        "category": "Retail & Markets",
-        "description": "Lancaster County's Tuesday tradition for farm produce and baked goods."
-
-    },
-    {
-        "name": "Mount Hope Estate & Winery",
-        "address": "2775 Lebanon Rd, Manheim, PA, 17545",
-        "phone": "(717) 665-7021",
-        "website": "https://www.parenfaire.com/",
-        "image": "images/members/mount-hope.webp",
-        "level": 3,
-        "category": "Tourism & Entertainment",
-        "description": "Home of the Pennsylvania Renaissance Faire and year-round performances."
-
-    },
 {
-        "name": "Manheim Coffee Roasters",
-        "address": "123 Market St, Manheim, PA 17545",
-        "phone": "(717) 555-0123",
-        "website": "https://example.com/roasters",
-        "image": "images/members/manheim-coffee.webp",
-        "level": 2,
-        "category": "Food & Beverage",
-        "description": "Small-batch roastery featuring local pastries and seasonal blends."
-  },
-  {
-        "name": "Stiegel Tech Services",
-        "address": "215 Forge Ave, Manheim, PA 17545",
-        "phone": "(717) 555-0456",
-        "website": "https://example.com/stiegeltech",
-        "image": "images/members/stiegel-tech.webp",
-        "level": 3,
-        "category": "IT & Consulting",
-        "description": "Managed IT, cloud migrations, cybersecurity for small businesses."
-  },
-  {
-        "name": "Donegal Community Nonprofit",
-        "address": "50 Civic Way, Manheim, PA 17545",
-        "phone": "(717) 555-0199",
-        "website": "https://example.com/donegal",
-        "image": "images/members/donegal-npo.webp",
-        "level": 1,
-        "category": "Community & Nonprofit",
-        "description": "Youth programs, volunteer events, and neighborhood partnerships."
-  },
-  {
-        "name": "Blacksmith & Co. Hardware",
-        "address": "22 Ironworks Ln, Manheim, PA 17545",
-        "phone": "(717) 555-0280",
-        "website": "https://example.com/blacksmithco",
-        "image": "images/members/blacksmith-hardware.webp",
-        "level": 1,
-        "category": "Home & Trade",
-        "description": "Local hardware and tool rentals with weekend workshops."
-  }
-
-]
+    "family_name": "Stinnett",
+    "move_in_date": "2024-12-29",
+    "number_of_people": 4,
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Boyd Stinnett",
+            "gender": "Male",
+            "birthdate": "1994-04-12"
+        },
+        {
+            "name": "Autumn Stinnett",
+            "gender": "Female",
+            "birthdate": "1994-04-12"
+        },
+        {
+            "name": "Nicole Stinnett",
+            "gender": "Female",
+            "birthdate": "1992-02-21"
+        },
+        {
+            "name": "Wade Stinnett",
+            "gender": "Male",
+            "birthdate": "1992-02-21"
+        }
+    ]
+}

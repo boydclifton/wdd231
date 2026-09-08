@@ -40,3 +40,4 @@ const lastModifiedE1 = document.querySelector("#lastModified");
 if (lastModifiedE1) {
     lastModifiedE1.textContent = `Last modified: ${document.lastModified}`;
 }
+
