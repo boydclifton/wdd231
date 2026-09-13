@@ -1,28 +1,65 @@
-{
-    "family_name": "Stinnett",
-    "move_in_date": "2024-12-29",
-    "number_of_people": 4,
-    "visited_by_bishopric": true,
-    "family_members": [
-        {
-            "name": "Boyd Stinnett",
-            "gender": "Male",
-            "birthdate": "1994-04-12"
-        },
-        {
-            "name": "Autumn Stinnett",
-            "gender": "Female",
-            "birthdate": "1994-04-12"
-        },
-        {
-            "name": "Nicole Stinnett",
-            "gender": "Female",
-            "birthdate": "1992-02-21"
-        },
-        {
-            "name": "Wade Stinnett",
-            "gender": "Male",
-            "birthdate": "1992-02-21"
-        }
-    ]
-}
+[
+    {
+        "name": "Manheim Auto Auction",
+        "address": "1190 Lancaster Rd, Manheim, PA 17545",
+        "phone": "(717) 665-3571",
+        "website": "https://manheim.com",
+        "image": "auto-auction.webp",
+        "membershipLevel": 3,
+        "description": "The largest wholesale auto auction in the tri-state area."
+    },
+    {
+        "name": "Kreider Farms",
+        "address": "1461 Lancaster Road, Manheim, PA 17545",
+        "phone": "(717) 665-2616",
+        "website": "https://www.kreiderfarms.com",
+        "image": "kreider-farms.webp",
+        "membershipLevel": 3,
+        "description": "Providing fresh milk, ice cream, and eggs since 1935."
+    },
+    {
+        "name": "Manheim Twin Kiss",
+        "address": "309 S Main St, Manheim, PA 17545",
+        "phone": "(717) 665-2897",
+        "website": "https://www.manheimtwinkiss.com",
+        "image": "twin-kiss.webp",
+        "membershipLevel": 1,
+        "description": "Classic local drive-in serving burgers and soft serve."
+    },
+    {
+        "name": "Mount Hope Estate",
+        "address": "2775 Lebanon Road, Manheim, PA 17545",
+        "phone": "(717) 665-7021",
+        "website": "https://www.parenfaire.com",
+        "image": "mount-hope.webp",
+        "membershipLevel": 2,
+        "description": "Home of the Pennsylvania Renaissance Faire and Mount Hope Winery."
+    },
+    {
+        "name": "Root's Country Market & Auction",
+        "address": "705 Greystone Rd, Manheim, PA 17545",
+        "phone": "(717) 898-7811",
+        "website": "https://www.rootsmarket.com",
+        "image": "roots-market.webp",
+        "membershipLevel": 2,
+        "description": "The oldest single-family run country market in Lancaster County."
+    },
+    {
+        "name": "Hondru Ford of Manheim",
+        "address": "300 S Main St, Manheim, PA 17545",
+        "phone": "(717) 665-3551",
+        "website": "https://www.hondruauto.com",
+        "image": "hondru-ford.webp",
+        "membershipLevel": 3,
+        "description": "Your local, trusted Ford dealership and service center."
+    },
+    {
+        "name": "Artifice Ales & Mead",
+        "address": "55 N Main St, Manheim, PA 17545",
+        "phone": "(717) 879-9499",
+        "website": "https://www.artificeales.com",
+        "image": "artifice-ales.webp",
+        "membershipLevel": 1,
+        "description": "Local brewpub offering unique ales, meads, and a scratch kitchen."
+    }
+]

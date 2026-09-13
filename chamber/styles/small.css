@@ -1,0 +1,230 @@
+/************************************** GLOBAL **********************************/
+
+:root {
+    --primary-color: #72242b;
+    --secondary-color: #4a4a4a;
+    --accent-color: #d4af37;
+    --bg-color: #f4f4f9;
+    --text-dark: #222222;
+    --text-light: #ffffff;
+    --heading-font: 'Arial', Helvetica, sans-serif;
+    --body-font: 'Verdana', sans-serif;
+}
+
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+
+/************************************** HEADER **********************************/
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.header-container h1 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/************************************** NAVIGATION (MOBILE LAYOUT) **********************************/
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+#menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+}
+
+.menu-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.menu-links.open {
+    display: flex;
+}
+
+.menu-links li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-links li a:hover,
+.menu-links li a:active {
+    background-color: var(--primary-color);
+}
+
+/************************************** MAIN & TOGGLE **********************************/
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.menu-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1rem 0;
+}
+
+.menu-toggle button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.menu-toggle button:hover {
+    background-color: var(--primary-color);
+}
+
+
+/************************************** FOOTER **********************************/
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1.8rem;
+
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/************************************** DIRECTORY CARDS (MOBILE) **********************************/
+
+#directory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.business-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.business-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 22px;
+    margin-bottom: 1.2rem;
+}
+
+.business-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.business-card p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.business-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.business-card a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+
+}
+
+/************************************** LIST VIEW **********************************/
+
+#directory-grid.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#directory-grid.list .business-card {
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.8rem;
+    background-color: transparent;
+}
+
+#directory-grid.list .business-card:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+
+#directory-grid.list .business-card img {
+    display: none;
+}
+
+
+#directory-grid.list .business-card a {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+}

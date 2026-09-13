@@ -1,43 +1,90 @@
-// shared behavior for all chamber pages // 
+const currentYear = new Date().getFullYear();
+document.getElementById('currentyear').textContent = currentYear;
 
-// -------------------------------- MOBILE MENU TOGGLE ------------------------------- // 
+const lastModified = document.lastModified;
+document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
 
+const hamBtn = document.getElementById('menu-button');
+const menuLinks = document.querySelector('.menu-links');
 
+hamBtn.addEventListener('click', () => {
+    menuLinks.classList.toggle('open');
 
-const menuButton = document.querySelector("#menuButton");
-const primaryNav = document.querySelector("#primaryNav");
-
-if (menuButton && primaryNav) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = primaryNav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-  });
-
-
- // Close menu with Escape (accessibility nicety)
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && primaryNav.classList.contains('open')) {
-      primaryNav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.focus();
+    if (menuLinks.classList.contains('open')) {
+        hamBtn.innerHTML = '&#10006;';
+    } else {
+        hamBtn.innerHTML = '&#9776;';
     }
-  });
+});
+
+const membersURL = "data/members.json";
+
+async function getMembers() {
+    try {
+        const response = await fetch(membersURL);
+
+        if (response.ok) {
+            const members = await response.json();
+            displayMembers(members);
+        } else {
+            console.error("Was unable to fetch data");
+        }
+    } catch (error) {
+        console.error("There was an error fetching data:", error);
+    }
 }
 
+const displayMembers = (members) => {
+    const grid = document.querySelector('#directory-grid');
+
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        card.classList.add('business-card');
+
+        let image = document.createElement('img');
+        let name = document.createElement('h3');
+        let description = document.createElement('p');
+        let address = document.createElement('p');
+        let phone = document.createElement('p');
+        let website = document.createElement('a');
+
+        name.textContent = member.name;
+        description.textContent = member.description;
+        address.textContent = member.address;
+        phone.textContent = member.phone;
 
 
-// ------------------------ FOOTER DATES ------------------ // 
+        website.textContent = "Visit Website";
+        website.setAttribute('href', member.website);
+        website.setAttribute('target', '_blank');
 
+        image.setAttribute('src', `images/${member.image}`);
+        image.setAttribute('alt', 'Business photo/logo');
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '400');
+        image.setAttribute('height', 'auto');
 
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(description);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
 
-const yearSpan = document.querySelector("#currentYear");
-const today = new Date();
-if (yearSpan) {
-    yearSpan.textContent = today.getFullYear();
+        grid.appendChild(card);
+    });
 }
 
-const lastModifiedE1 = document.querySelector("#lastModified");
-if (lastModifiedE1) {
-    lastModifiedE1.textContent = `Last modified: ${document.lastModified}`;
-}
+getMembers();
 
+const gridButton = document.querySelector('#grid-btn');
+const listbutton = document.querySelector('#list-btn');
+const display = document.querySelector('#directory-grid');
+
+listbutton.addEventListener('click', () => {
+    display.classList.add('list');
+});
+
+gridButton.addEventListener('click', () => {
+    display.classList.remove('list');
+});

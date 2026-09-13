@@ -1,0 +1,42 @@
+@media (min-width: 48rem) {
+
+    /**** HEADER ****/
+
+    .header-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    /**** NAVIGATION ****/
+
+    #menu-button {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-links li a {
+        border-top: none;
+        padding: 1rem 1.5rem;
+    }
+
+    /**** FOOTER ****/
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+    }
+
+    /**** DIRECTORY CARDS (DESKTOP) ****/
+
+    #directory-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
