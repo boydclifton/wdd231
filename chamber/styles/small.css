@@ -101,7 +101,7 @@ main {
     min-height: 80vh;
 }
 
-main h2 {
+main h1 {
     text-align: center;
     border-bottom: 2px solid var(--accent-color);
 }
