@@ -88,3 +88,17 @@ listbutton.addEventListener('click', () => {
 gridButton.addEventListener('click', () => {
     display.classList.remove('list');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
