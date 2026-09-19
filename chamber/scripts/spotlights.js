@@ -33,7 +33,7 @@ function generateSpotlightCards(spotlightArray) {
         <h3>${companyInfo.name}</h3>
         <p>Phone: ${companyInfo.phone}</p>
         <p><a href='${companyInfo.website}' target='_blank'>${companyInfo.website}</a></p>
-        <p>${companyInfo.membershipLevel} Membership Level:</p>`;
+        <p>Membership Level: ${companyInfo.membershipLevel}</p>`;
 
         spotlightWrapper.appendChild(memberCard);
     });
