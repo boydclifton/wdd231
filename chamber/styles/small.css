@@ -268,7 +268,7 @@ footer p {
     border: 1px solid var(--accent-color);
 }
 
-.hero-info h2 {
+.hero-info h1 {
     color: var(--primary-color);
     margin-top: 0;
 }
