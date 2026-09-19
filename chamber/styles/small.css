@@ -295,7 +295,9 @@ footer p {
 
 /************************************** MAIN CONTENT CARDS **********************************/
 
-.events, .weather, .spotlights {
+.events,
+.weather,
+.spotlights {
     background-color: var(--text-light);
     border: 1px solid #e0e0e0;
     border-top: 3px solid var(--primary-color);
@@ -306,7 +308,9 @@ footer p {
     text-align: center;
 }
 
-.events h2, .weather h2, .spotlights h2 {
+.events h2,
+.weather h2,
+.spotlights h2 {
     color: var(--primary-color);
     margin-top: 0;
 }
@@ -357,6 +361,12 @@ footer p {
     text-align: center;
 }
 
+.spotlight-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    overflow-wrap: anywhere
+}
 
 .spotlight-card img {
     width: 100%;
