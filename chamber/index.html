@@ -9,19 +9,22 @@
         content="Manheim Chamber of Commerce Home Page. Browse local businesses and network with other like-minded entrepreneurs.">
     <meta name="author" content="Boyd Stinett">
     <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="Directory for Manheim, PA Chamber of Commerce">
+    <meta property="og:title" content="Home Page for Manheim, PA Chamber of Commerce">
     <meta property="og:description"
         content="Discover local businesses in the Manheim, PA Chamber of Commerce. Network, plan, and involve yourself in the rich commercial environment of Manheim, PA.">
     <meta property="og:image" content="https://boydclifton.github.io/wdd231/chamber/images/og-image.webp">
     <meta property="og:url" content="https://boydclifton.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapisk.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+
 </head>
 
 <body>
@@ -45,8 +48,51 @@
 
 
 
-    <main>
-        
+    <main class="home-layout">
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="https://placehold.co/600x400/72242b/ffffff?text=Mobile+Hero">
+                <img src="https://placehold.co/1200x600/72242b/ffffff?text=Desktop+Hero"
+                    alt="Greetings and welcome to the Chamber of Commerce website for Manheim, Pennsylvania"
+                    width="1200" height="600">
+            </picture>
+            <div class="hero-info">
+                <h2>Welcome to Manheim</h2>
+                <a href="join.html" class="call-button">Join Chamber of Commerce!</a>
+            </div>
+        </section>
+
+
+        <section class="events">
+            <h2>Current Events</h2>
+            <p>Find out the current happenings in Manheim.</p>
+        </section>
+
+
+        <section class="weather">
+            <h2>Today's Forecast - Noon</h2>
+            <div id="weather-info">
+                <div class="current-weather">
+                    <img id="current-condition-img" src="" alt="">
+                    <p><span id="temp-value"></span>&deg;F</p>
+                    <figcaption id="condition-desc"></figcaption>
+                </div>
+                <h3>3-Day Forecast: Noon</h3>
+                <ul id="three-day-outlook"></ul>
+            </div>
+        </section>
+
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-div">
+
+            </div>
+        </section>
+
+
+
+
     </main>
 
     <footer>

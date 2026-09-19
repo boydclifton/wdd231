@@ -39,4 +39,24 @@
     #directory-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+
+     /**** MAIN (HOME PAGE) ****/
+
+     .home-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        padding: 1.2rem;
+        background-color: #f4f4f9;
+     }
+
+     .home-layout .hero {
+        grid-column: 1 / -1
+     }
+
+     .home-layout .events,
+     .home-layout .weather,
+     .home-layout .spotlights {
+        margin: 0;
+     }
 }

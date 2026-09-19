@@ -75,19 +75,26 @@ const displayMembers = (members) => {
     });
 }
 
-getMembers();
 
-const gridButton = document.querySelector('#grid-btn');
-const listbutton = document.querySelector('#list-btn');
+
 const display = document.querySelector('#directory-grid');
 
-listbutton.addEventListener('click', () => {
-    display.classList.add('list');
-});
+if (display) {
+    getMembers();
+    const gridButton = document.querySelector('#grid-btn');
+    const listbutton = document.querySelector('#list-btn');
 
-gridButton.addEventListener('click', () => {
-    display.classList.remove('list');
-});
+
+    listbutton.addEventListener('click', () => {
+        display.classList.add('list');
+    });
+
+    gridButton.addEventListener('click', () => {
+        display.classList.remove('list');
+    });
+
+}
+
 
 
 
