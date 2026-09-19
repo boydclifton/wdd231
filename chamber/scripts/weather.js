@@ -28,7 +28,7 @@ function displayTodayWeather(weatherData) {
     const roundedTemperature = Math.round(weatherData.main.temp);
     tempDisplay.innerHTML = roundedTemperature;
     const apiIconCode = weatherData.weather[0].icon;
-    const fullIconUrl = `https://openweathermap.org/img/wn/${apiIconCode}@2x.png`;
+    const fullIconUrl = `https://openweathermap.org/img/wn/${apiIconCode}@4x.png`;
     const conditionString = weatherData.weather[0].description;
     weatherGraphic.setAttribute('src', fullIconUrl);
     weatherGraphic.setAttribute('alt', conditionString);
