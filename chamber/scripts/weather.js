@@ -58,7 +58,7 @@ function showThreeDayForecast(forecastJson) {
         const dayString = jsDateObject.toLocaleDateString('en-US', { weekday: 'long' });
         const roundedDayTemp = Math.round(dayInfo.main.temp);
         const newListItem = document.createElement('li');
-        newListItem.innerHTML = `${dayString}: ${roundedDayTemp}&deg;F`;
+        newListItem.innerHTML = `<strong>${dayString}</strong>: ${roundedDayTemp}&deg; F`;
         outlookList.appendChild(newListItem);
     })
 }
