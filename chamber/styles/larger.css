@@ -40,35 +40,26 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
-    /**** MAIN (HOME PAGE) ****/
+     /**** MAIN (HOME PAGE) ****/
 
-    .home-layout {
+     .home-layout {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr), minmax(0, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
         padding: 1.2rem;
         background-color: #f4f4f9;
-    }
+     }
 
-    .home-layout .hero {
+     .home-layout .hero {
         grid-column: 1 / -1
-    }
+     }
 
-    .home-layout .events,
-    .home-layout .weather,
-    .home-layout .spotlights {
+     .home-layout .events,
+     .home-layout .weather,
+     .home-layout .spotlights {
         margin: 0;
-    }
+     }
 
 
-    #spotlight-div {
-        /* We override the 'display: flex' from small.css and switch to a grid */
-        display: grid;
-
-        /* We tell the grid to create exactly 2 columns of equal width (1 fraction each) */
-        grid-template-columns: 1fr 1fr;
-
-        /* We keep a nice gap between the side-by-side cards */
-        gap: 1.5rem;
-    }
+     
 }
