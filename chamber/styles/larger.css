@@ -59,4 +59,16 @@
      .home-layout .spotlights {
         margin: 0;
      }
+
+
+     #spotlight-div {
+    /* We override the 'display: flex' from small.css and switch to a grid */
+    display: grid;
+    
+    /* We tell the grid to create exactly 2 columns of equal width (1 fraction each) */
+    grid-template-columns: 1fr 1fr; 
+    
+    /* We keep a nice gap between the side-by-side cards */
+    gap: 1.5rem; 
+}
 }
