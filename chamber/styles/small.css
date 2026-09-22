@@ -366,7 +366,7 @@ footer p {
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
-    overflow-wrap: anywhere
+    
 }
 
 .spotlight-card img {
