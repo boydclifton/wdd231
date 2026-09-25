@@ -76,7 +76,7 @@
      /******************************************************** MAIN (JOIN PAGE) ***********************************************/
      
 
-     .registration-main h2 {
+     .registration-main h1 {
         grid-column: 1 / -1;
         margin-top: 0;
         text-align: center;
