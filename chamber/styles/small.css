@@ -482,7 +482,7 @@ footer p {
     border-top: 4px solid var(--accent-color, #d4af37);
 }
 
-.subscription-level-box h3 {
+.subscription-level-box h2 {
     color: var(--primary-color, #72242b);
     font-family: var(--heading-font, 'Arial', sans-serif);
     margin-bottom: 0.6rem;
