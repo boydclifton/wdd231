@@ -1,0 +1,5 @@
+*{box-sizing: border-box;}
+
+.box {
+    transform: rotate(15deg) translateX(20px) scale(1.2);
+}

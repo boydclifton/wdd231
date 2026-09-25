@@ -13,7 +13,7 @@
     <meta property="og:description"
         content="Welcome to the Manheim, PA Chamber of Commerce Home Page. See local current events, weather information, and see member spotlights.">
     <meta property="og:image" content="https://boydclifton.github.io/wdd231/chamber/images/og-image.webp">
-    <meta property="og:url" content="https://boydclifton.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://boydclifton.github.io/wdd231/chamber/thankyou.html">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+
 
 </head>
 
@@ -44,57 +44,27 @@
             </ul>
         </nav>
     </header>
+    
+    <main class="confirmation-main">
+        <h2>Application Received</h2>
+        <section class="data-display-board">
+            <p>
+                Thank you, <strong><span id="display-fname"></span> <span id="display-lname"></strong>!</span>
+            </p>
+
+            <p>Your application for <span id="display-biz-name"></span> has been submitted.</p>
+
+            <h3>Submission Details:</h3>
+            <ul>
+                <li><strong>Email: </strong><span id="display-email"></span></li>
+                <li><strong>Phone: </strong><span id="display-phone"></span></li>
+                <li><strong>Membership Tier: </strong><span id="display-tier"></span></li>
+                <li><strong>Timestamp: </strong><span id="display-time"></span></li>
+            </ul>
 
 
-
-
-    <main class="home-layout">
-        <section class="hero">
-            <picture>
-                <source media="(max-width: 600px)" srcset="images/hero-mobile.webp">
-                <img src="images/hero-desktop.webp"
-                    alt="Greetings and welcome to the Chamber of Commerce website for Manheim, Pennsylvania"
-                    width="1200" height="600">
-            </picture>
-            <div class="hero-info">
-                <h1>Welcome to Manheim!</h1>
-                <a href="join.html" class="call-button">Join Chamber of Commerce!</a>
-            </div>
         </section>
-
-
-        <section class="events">
-            <h2>Current Events</h2>
-            <p>Find out the current happenings in Manheim.</p>
-        </section>
-
-
-        <section class="weather">
-            <h2>Today's Forecast</h2>
-            <div id="weather-info">
-                <div class="current-weather">
-                    <img id="current-condition-img" src="images/favicon.ico" alt="Weather icon">
-                    <p><span id="temp-value"></span>&deg;F</p>
-                    <p id="condition-desc"></p>
-                </div>
-                <h3>3-Day Forecast</h3>
-                <ul id="three-day-outlook"></ul>
-            </div>
-        </section>
-
-
-        <section class="spotlights">
-            <h2>Member Spotlights</h2>
-            <div id="spotlight-div">
-
-            </div>
-        </section>
-
-        <dialog id="course-details"></dialog>
-
-
     </main>
-
     <footer>
         <div class="contanct-info">
             <p><strong>Manheim Chamber of Commerce</strong></p>
@@ -109,6 +79,10 @@
         </div>
     </footer>
 
+
+
+
+
 </body>
 
-</html>
+   

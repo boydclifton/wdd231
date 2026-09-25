@@ -388,3 +388,182 @@ footer p {
 .spotlight-card a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+/************************************** FORM STYLES **********************************/
+
+.member-info-group,
+.business-details-group {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--primary-color, #72242b);
+    border-radius: 10px;
+    background-color: var(--text-light, #ffffff);
+}
+
+.registration-main h2 {
+    text-align: center;
+}
+
+.membership-form legend {
+    padding: 0 0.75rem;
+    color: var(--primary-color, #72242b);
+    font-family: var(--heading-font, 'Arial', sans-serif);
+    font-weight: bold;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark, #222222);
+    font-family: var(--body-font, 'Roboto', sans-serif);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form select,
+.membership-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.4rem;
+    border: 1px solid var(--secondary-color, #4a4a4a);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: var(--body-font, 'Roboto', sans-serif);
+    background-color: var(--text-light, #ffffff);
+    color: var(--text-dark, #222222)
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color, #d4af37);
+    box-shadow: 0 0 6px var(--accent-color, #d4af37);
+}
+
+.submit-application-btn {
+    background-color: var(--primary-color, #72242b);
+    color: var(--text-light, #ffffff);
+    border: none;
+    padding: 1.2rem 1.8rem;
+    border-radius: 24px;
+    font-family: var(--heading-font, 'Arial', sans-serif);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-application-btn:hover {
+    color: var(--text-dark, #222222);
+    background-color: var(--accent-color, #d4af37);
+}
+
+
+/************************************** MEMBERSHIP CARD STYLES **********************************/
+
+.subscription-level-box {
+    background-color: var(--bg-color, #f4f4f9);
+    border: 1px solid var(--secondary-color, #4a4a4a);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-family: var(--body-font, 'Roboto', sans-serif);
+}
+
+.subscription-level-box h3 {
+    color: var(--primary-color, #72242b);
+    font-family: var(--heading-font, 'Arial', sans-serif);
+    margin-bottom: 0.6rem;
+}
+
+.reveal-benefits-btn {
+    background-color: var(--secondary-color, #4a4a4a);
+    color: var(--text-light, #ffffff);
+    font-family: var(--heading-font, 'Arial', sans-serif);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.reveal-benefits-btn:hover {
+    background-color: var(--primary-color, #72242b);
+}
+
+/************************************** MEMBERSHIP CARD PRE-LOAD ANIMATIONS **********************************/
+
+@keyframes cascadeUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subscription-level-box {
+    animation: cascadeUpFade 0.5s ease-out forwards;
+    opacity: 0;
+    border-top: 4px solid var(--accent-color, #d4af37);
+}
+
+.subscription-level-box:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.subscription-level-box:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.subscription-level-box:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.subscription-level-box:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+
+/************************************** THANK-YOU PAGE **********************************/
+
+.data-display-board {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--text-light, #ffffff);
+    border: 2px solid var(--primary-color, #72242b);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: var(--body-font, 'Roboto', sans-serif);
+    color: var(--text-dark, #222222);
+}
+
+.data-display-board h2 {
+    color: var(--primary-color, #72242b);
+    border-bottom: 2px solid var(--accent-color, #d4af37);
+    padding-bottom: 1rem;   
+}
+
+.confirmation-main h2 {
+    text-align: center;
+}

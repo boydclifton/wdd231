@@ -96,8 +96,34 @@ if (display) {
 }
 
 
+/************************************** MODALS **********************************/
 
+const timestampField = document.getElementById('form-loaded-time');
 
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
+
+function setupTierDialog(openBtnId, dialogElementId, dismissBtnId) {
+    const openButton = document.getElementById(openBtnId);
+    const benefitsDialog = document.getElementById(dialogElementId);
+    const dismissButton = document.getElementById(dismissBtnId);
+
+    if (openButton && benefitsDialog && dismissButton) {
+        openButton.addEventListener('click', () => {
+            benefitsDialog.showModal();
+        });
+
+        dismissButton.addEventListener('click', () => {
+            benefitsDialog.close();
+        });
+    }
+}
+
+setupTierDialog("trigger-np-details", "dialog-np-info", "dismiss-np-info");
+setupTierDialog("trigger-bronze-details", "dialog-bronze-info", "dismiss-bronze-info");
+setupTierDialog("trigger-silver-details", "dialog-silver-info", "dismiss-silver-info");
+setupTierDialog("trigger-gold-details", "dialog-gold-info", "dismiss-gold-info");
 
 
 

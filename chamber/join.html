@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manheim Chamber of Commerce - Home</title>
+    <meta name="description"
+        content="Manheim Chamber of Commerce Home Page. Browse local businesses and network with other like-minded entrepreneurs.">
+    <meta name="author" content="Boyd Stinnett">
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Home Page for Manheim, PA Chamber of Commerce">
+    <meta property="og:description"
+        content="Welcome to the Manheim, PA Chamber of Commerce Home Page. See local current events, weather information, and see member spotlights.">
+    <meta property="og:image" content="https://boydclifton.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://boydclifton.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/main.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="images/favicon.ico" alt="Chamber of Commerce Logo" width="100" height="100">
+            <span class="site-title">Manheim Chamber of Commerce</span>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Open Menu">&#9776;</button>
+            <ul id="animate-me" class="menu-links">
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="directory.html">Directory</a> </li>
+                <li><a href="join.html" class="active">Join</a> </li>
+                <li><a href="discover.html">Discover</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="registration-main">
+
+
+
+        <h2>Join the Chamber</h2>
+        <div class="application-wrapper">
+
+
+
+            <form method="get" action="thankyou.html" class="membership-form">
+                <fieldset class="member-info-group">
+
+                    <legend>Applicant Information</legend>
+
+                    <label>First Name*
+                        <input type="text" name="first_name" id="first-name-field" title="Enter first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label>Last Name*
+                        <input type="text" name="last_name" id="last-name-field" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label>Organizational Title
+                        <input type="text" name="org_title" id="job-title-field"
+                            title="Entry must contain at least 7 characters" autocomplete="organization-title"
+                            pattern="[a-zA-Z\- ]{7,}">
+                    </label>
+
+                    <label>Email Address*
+                        <input type="email" name="email" id="email-address-field"
+                            title="Please enter your email address" autocomplete="email" placeholder="email@example.com"
+                            required>
+                    </label>
+
+                    <label>Phone Number*
+                        <input type="tel" name="phone" id="mobile-phone-field" title="Please enter your phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                </fieldset>
+
+                <fieldset class="business-details-group">
+                    <legend>Organization Details</legend>
+
+                    <label>Organization Name*
+                        <input type="text" name="business_name" id="biz-name-field" title="Enter name of organization"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership Level*
+                        <select name="membership_level" id="tier-selection-menu" title="Pick a membership tier"
+                            required>
+                            <option value="" disable selected>Select level</option>
+                            <option value="np">NP Membership (Non-Profit - Free)</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
+
+                    <label>Business Description
+                        <textarea name="business_description" id=" biz-description-box"
+                            title="Please type out a description of your organization" rows="4"></textarea>
+                    </label>
+
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="form-loaded-time">
+                <button type="submit" class="submit-application-btn">Complete Application</button>
+
+            </form>
+
+        </div>
+
+
+
+        <div class="tier-cards-wrapper">
+
+
+
+            <article class="subscription-level-box" id="panel-nonprofit">
+                <h3>Non-Profit Membership</h3>
+                <p>Free for registered non-profit organizations</p>
+                <button id="trigger-np-details" class="reveal-benefits-btn">View Benefits</button>
+            </article>
+
+            <dialog id="dialog-np-info" class="tier-benefits-popup">
+
+                <h3>Non-Profit Benefits</h3>
+                <p>Non-profit members receive:</p>
+                <ul>
+                    <li>Free directory listing with basic information</li>
+                    <li>Access to monthly networking events</li>
+                    <li>Community bulletin board access</li>
+                </ul>
+                <button id="dismiss-np-info" type="button" class="close-popup-btn">Close</button>
+            </dialog>
+
+            <article class="subscription-level-box" id="panel-bronze">
+                <h3>Bronze Membership</h3>
+                <p>Ideal for fledgeling businesses working to gain a foothold in the business community</p>
+                <button id="trigger-bronze-details" class="reveal-benefits-btn">View Benefits</button>
+            </article>
+
+            <dialog id="dialog-bronze-info" class="tier-benefits-popup">
+                <h3>Bronze Benefits</h3>
+                <p>Bronze members receive all benefits from NP tier, but also:</p>
+                <ul>
+                    <li>Discount of 15% on all chamber events</li>
+                    <li>Directory listing that includes logo</li>
+                    <li>Quarterly retreats with affiliated chamber organizations</li>
+                </ul>
+                <button id="dismiss-bronze-info" type="button" class="close-popup-btn">Close</button>
+            </dialog>
+
+            <article class="subscription-level-box" id="panel-silver">
+                <h3>Silver Membership</h3>
+                <p>Perfect for mid-sized businesses seeking strong growth.</p>
+                <button id="trigger-silver-details" class="reveal-benefits-btn">View Benefits</button>
+            </article>
+
+            <dialog id="dialog-silver-info" class="tier-benefits-popup">
+                <h3>Silver Benefits</h3>
+                <p>Silver tier members receive everything in NP and Bronze, but also:</p>
+                <ul>
+                    <li>Discount of 20% on all chamber events</li>
+                    <li>Professionally designed premium directory listing with options for SEO links</li>
+                    <li>Monthly "Business Spotlight" puff piece written by Jeremy</li>
+                </ul>
+                <button id="dismiss-silver-info" type="button" class="close-popup-btn">Close</button>
+            </dialog>
+
+            <article class="subscription-level-box" id="panel-gold">
+                <h3>Gold Membership</h3>
+                <p>Perfect for mid-sized businesses seeking strong growth.</p>
+                <button id="trigger-gold-details" class="reveal-benefits-btn">View Benefits</button>
+            </article>
+
+            <dialog id="dialog-gold-info" class="tier-benefits-popup">
+                <h3>Gold Benefits</h3>
+                <p>Ideal for large enterprising businesses looking for explosive growth and brand recognition</p>
+                <ul>
+                    <li>Discount of 40% on all chamber events</li>
+                    <li>Access to state-accredited lobbyists and institutional influence</li>
+                    <li>Weekly "Business Spotlight" puff piece written by Jeremy</li>
+                </ul>
+                <button id="dismiss-gold-info" type="button" class="close-popup-btn">Close</button>
+            </dialog>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="contanct-info">
+            <p><strong>Manheim Chamber of Commerce</strong></p>
+            <p>15 East High Street, Manheim, PA 17545</p>
+            <p>Email: info@manheimchamber.org</p>
+            <p>Phone: (717) 555-3843</p>
+        </div>
+
+        <div class="dev-info">
+            <p>&copy; <span id="currentyear"></span> | Boyd Stinnett | WDD 231 </p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
