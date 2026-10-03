@@ -648,3 +648,10 @@ footer p {
     
     
 }
+
+.discover-title {
+    text-align: center;
+    color: var(--primary-color, #72242b);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
