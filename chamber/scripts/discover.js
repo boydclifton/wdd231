@@ -24,6 +24,11 @@ manheimLocations.forEach((location, index) => {
     actionBtn.type = 'button';
     actionBtn.className = 'learn-more-btn';
     actionBtn.textContent = 'Learn More';
+    actionBtn.addEventListener('click', () => {
+        window.open(location.website, '_blank');
+    });
+
+
     poiCard.appendChild(locationTitle);
     poiCard.appendChild(photoBox);
     poiCard.appendChild(streetInfo);
