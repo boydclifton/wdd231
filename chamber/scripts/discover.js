@@ -5,7 +5,7 @@ manheimLocations.forEach((location, index) => {
     const poiCard = document.createElement('article');
     poiCard.classList.add('discover-card', `card-${index + 1}`);
     const locationTitle = document.createElement('h2');
-    
+
     locationTitle.textContent = location.name;
     const photoBox = document.createElement('figure');
     const siteImage = document.createElement('img');
@@ -15,7 +15,7 @@ manheimLocations.forEach((location, index) => {
     siteImage.height = 200;
     siteImage.setAttribute('loading', 'lazy');
     photoBox.appendChild(siteImage);
-    
+
     const streetInfo = document.createElement('address');
     streetInfo.textContent = location.address;
     const detailsText = document.createElement('p');
@@ -51,7 +51,7 @@ if (previousVisitTime === 0) {
     const daysSinceLastVisit = Math.floor(timeElapsed / millisecondsPerDay);
 
     if (daysSinceLastVisit < 1) {
-        welcomeDisplay.textContent = "Back so soon! Awesome!";
+        welcomeDisplay.textContent = "Glad to see you back so soon!";
     } else if (daysSinceLastVisit === 1) {
         welcomeDisplay.textContent = "You last visited 1 day ago.";
     } else {
