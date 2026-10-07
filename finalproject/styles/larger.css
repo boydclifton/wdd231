@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul,
+    nav ul.hidden {
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    nav a {
+        border-bottom: none;
+        padding: 1.1rem 2rem;
+        border-radius: 4px;
+        margin: 0 0.5rem;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.85);
+
+    }
+
+    .intro-section {
+        padding: 4rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 2rem 5%;
+    }
+
+    dialog#game-modal {
+        max-width: 500px;
+    }
+
+    .newsletter-form {
+        max-width: 600px;
+        margin: 2rem auto;
+        margin-bottom: 3rem;
+    }
+}

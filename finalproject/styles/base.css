@@ -1,0 +1,260 @@
+:root {
+    --bg-dark: #0b0b0f;
+    --text-light: #eaeaea;
+    --accent-gold: #E5A93C;
+    --font-heading: 'Share Tech Mono', monospace;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+    border-bottom: 2px solid var(--accent-gold);
+    position: relative;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #1a1a1a;
+}
+
+nav ul.hidden {
+    display: none;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+    text-align: center;
+    border-bottom: 1px solid #333;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+}
+
+.hero-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.intro-section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-section h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.intro-section p {
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    font-family: var(--font-heading);
+    border-radius: 5px;
+    font-weight: bold;
+
+
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000000;
+    border-top: 2px solid var(--accent-gold);
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--text-light);
+
+}
+
+.page-title {
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.1rem;
+}
+
+.game-card {
+    background-color: #1a1a1c;
+    border: 1px solid var(--accent-gold);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.details-btn {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: .9rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+dialog#game-modal {
+    margin: auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    background-color: #1a1a1c;
+    color: var(--text-light);
+    border: 2px solid var(--accent-gold);
+    border-radius: 8px;
+    max-width: 90%;
+    position: relative;
+}
+
+dialog#game-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-desc {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    margin: 2rem 1rem;
+    background-color: #1a1a1c;
+    padding: 2rem;
+    border: 1px solid var(--accent-gold);
+    border-radius: 10px;
+}
+
+fieldset {
+    border: 1px solid #333;
+    padding: 0 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-top: .9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-family: var(--font-body);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+
+}

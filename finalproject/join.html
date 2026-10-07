@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - The Kojima Legacy</title>
+    <meta name="description"
+        content="Sign up for the Kojima Legacy newsletter to receive updates on new games and articles.">
+    <meta name="author" content="Boyd Stinnett">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>The Kojima Legacy</h1>
+        <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
+
+    </header>
+
+    <nav>
+        <ul id="primary-nav" class="hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="join.html" class="active">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <main id="join-main">
+        <h2 class="page-title">Join the Network</h2>
+        <form method="get" action="thankyou.html" class="newsletter-form">
+            <fieldset>
+                <legend>Operative Details</legend>
+                <label for="fname">First Name*</label>
+                <input type="text" id="fname" name="fname" required autocomplete="given-name">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <label for="favgame">Favorite Kojima Game</label>
+                <select id="favgame" name="favgame">
+                    <option value="" disabled selected>Select a title...</option>
+                    <option value="Metal Gear Solid">Metal Gear Solid</option>
+                    <option value="Metal Gear Solid 2: Sons of Liberty">Metal Gear Solid 2: Sons of Liberty</option>
+                    <option value="Metal Gear Solid 3: Snake Eater">Metal Gear Solid 3: Snake Eater</option>
+                    <option value="Metal Gear Solid 4: Guns of the Patriots">Metal Gear Solid 4: Guns of the Patriots</option>
+                    <option value="Metal Gear Solid 5: The Phantom Pain">Metal Gear Solid 5: The Phantom Pain</option>
+                    <option value="Death Stranding">Death Stranding</option>
+                    <option value="other">Other / Not Sure</option>
+                </select>
+
+            </fieldset>
+            <input type="submit" value="Establish Connection" class="submit-btn">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> The Kojima Legacy | Boyd Stinnett | WDD 231</p>
+        <p id="lastModified"></p>
+        <p><a href=attributions.html>Attributions</a> | <a href="#" target="_blank">Video Demonstration</a></p>
+    </footer>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/join.js"></script>
+
+</body>
+
+</html>

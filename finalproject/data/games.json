@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Metal Gear",
+        "year": 1987,
+        "role": "Director / Writer",
+        "description": "The pioneer of the stealth game genre, forcing players to avoid combat."
+    },
+    {
+        "title": "Snatcher",
+        "year": 1988,
+        "role": "Director / Writer",
+        "description": "A cyberpunk graphic adventure heavily influenced by Blade Runner."
+    },
+    {
+        "title": "Metal Gear 2: Solid Snake",
+        "year": 1990,
+        "role": "Director / Writer",
+        "description": "Vastly expanded the stealth mechanics with radar and complex enemy AI."
+    },
+    {
+        "title": "Policenauts",
+        "year": 1994,
+        "role": "Director / Writer",
+        "description": "A hard sci-fi interactive cinematic adventure set in space."
+    },
+    {
+        "title": "Metal Gear Solid",
+        "year": 1998,
+        "role": "Director / Producer",
+        "description": "Brought the franchise into 3D and pioneered cinematic voice acting in gaming."
+    },
+    {
+        "title": "Zone of the Enders",
+        "year": 2001,
+        "role": "Producer",
+        "description": "A high-speed, anime-inspired mecha combat game."
+    },
+    {
+        "title": "Metal Gear Solid 2: Sons of Liberty",
+        "year": 2001,
+        "role": "Director / Producer",
+        "description": "A highly postmodern masterpiece dealing with digital censorship and memes."
+    },
+    {
+        "title": "Boktai: The Sun Is in Your Hand",
+        "year": 2003,
+        "role": "Producer",
+        "description": "An innovative Game Boy Advance game featuring a real-life solar sensor in the cartridge."
+    },
+    {
+        "title": "Metal Gear Solid: The Twin Snakes",
+        "year": 2004,
+        "role": "Producer",
+        "description": "A complete remake of the 1998 classic for the Nintendo GameCube."
+    },
+    {
+        "title": "Metal Gear Solid 3: Snake Eater",
+        "year": 2004,
+        "role": "Director / Producer",
+        "description": "A Cold War prequel introducing survival mechanics and camouflage."
+    },
+    {
+        "title": "Metal Gear Solid 4: Guns of the Patriots",
+        "year": 2008,
+        "role": "Director / Producer",
+        "description": "The epic conclusion to Solid Snake's story, featuring unprecedented cutscene length."
+    },
+    {
+        "title": "Metal Gear Solid: Peace Walker",
+        "year": 2010,
+        "role": "Director / Producer",
+        "description": "Brought deep base-building and co-op mechanics to the PSP."
+    },
+    {
+        "title": "P.T.",
+        "year": 2014,
+        "role": "Director",
+        "description": "A playable teaser for Silent Hills that revolutionized modern psychological horror."
+    },
+    {
+        "title": "Metal Gear Solid V: The Phantom Pain",
+        "year": 2015,
+        "role": "Director / Producer",
+        "description": "Moved the stealth-action franchise into a massive open-world structure."
+    },
+    {
+        "title": "Death Stranding",
+        "year": 2019,
+        "role": "Director / Producer",
+        "description": "A wholly original 'strand' game about reconnecting a fractured, post-apocalyptic America."
+    }
+]

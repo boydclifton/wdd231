@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - The Kojima Legacy</title>
+    <meta name="description" content="A comprehensive timeline of video games directed and produced by Hideo Kojima.">
+    <meta name="author" content="Boyd Stinnett">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>The Kojima Legacy</h1>
+        <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
+
+    </header>
+
+    <nav>
+        <ul id="primary-nav" class="hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html" class="active">Games</a></li>
+            <li><a href="join.html">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <main id="games-main">
+
+        <h2 class="page-title">The Masterpiece Timeline</h2>
+        <div id="games-container" class="grid-layout">
+
+        </div>
+
+
+
+    </main>
+
+    <dialog id="game-modal">
+        <button id="close-modal" aria-label="Close dialog">X</button>
+        <div id="modal-content"></div>
+    </dialog>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> The Kojima Legacy | Boyd Stinnett | WDD 231</p>
+        <p id="lastModified"></p>
+        <p><a href=attributions.html>Attributions</a> | <a href="#" target="_blank">Video Demonstration</a></p>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/games.js"></script>
+</body>
+
+</html>
