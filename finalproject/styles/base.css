@@ -258,3 +258,26 @@ input[type="text"]:focus, input[type="email"]:focus, select:focus {
     margin-top: 1.5rem;
 
 }
+
+
+.attributions-list {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 2rem;
+            background-color: #1a1a1c;
+            border: 1px solid var(--accent-gold);
+            border-radius: 8px;
+            color: var(--text-light);
+        }
+.attributions-list li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.attributions-list a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: bold;
+}
+.attributions-list a:hover {
+    text-decoration: underline;
+}
